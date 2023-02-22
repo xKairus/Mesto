@@ -7,3 +7,6 @@
 
 /* ----- container ----- */
 @import url(../blocks/container/container.css);
+
+/* ----- header ----- */
+@import url(../blocks/header/header.css);
