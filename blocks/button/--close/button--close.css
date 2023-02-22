@@ -1,0 +1,21 @@
+.button--close {
+    position: absolute;
+
+    width: 32px;
+    height: 32px;
+
+    top: -40px;
+    right: -40px;
+    background: url(../../../images/close-icon.svg) no-repeat center;
+
+    border: none;
+}
+
+@media (max-width: 750px) {
+    .button--close {
+        width: 20px;
+        height: 20px;
+        
+        right: 0;
+    }
+}
