@@ -1,0 +1,27 @@
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    max-width: 430px;
+    top: 195px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 460px) {
+    .popup-form {
+        max-width: calc(100% - 20px * 2);
+        top: 114px;
+    }
+}

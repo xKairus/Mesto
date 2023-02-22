@@ -4,3 +4,10 @@
 
 /* ----- page ----- */
 @import url(../blocks/page/page.css);
+
+/* ----- popup-form ----- */
+@import url(../blocks/popup-form/popup-form.css);
+
+@import url(../blocks/popup-form/__heading/popup-form__heading.css);
+@import url(../blocks/popup-form/__input-field/popup-form__input-field.css);
+@import url(../blocks/popup-form/__input/popup-form__input.css);
