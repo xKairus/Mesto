@@ -14,3 +14,10 @@
 
     border-radius: 10px;
 }
+
+@media (max-width: 460px) {
+    .popup-form {
+        top: 114px;
+        margin: 0 22px;
+    }
+}

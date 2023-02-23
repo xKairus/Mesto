@@ -8,3 +8,11 @@
     color: #fff;
     background-color: #000;
 }
+
+@media (max-width: 460px) {
+    .button--save {
+        margin: 48px 22px 45px;
+
+        font-size: 14px;
+    }
+}
