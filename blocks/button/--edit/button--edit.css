@@ -9,7 +9,7 @@
     border: 1px solid #fff;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 780px) {
     .button--edit {
         width: 18px;
         height: 18px;

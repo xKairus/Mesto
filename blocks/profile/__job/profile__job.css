@@ -10,3 +10,10 @@
     font-size: 18px;
     line-height: 1.2;
 }
+
+@media (max-width: 780px) {
+    .profile__job {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
