@@ -1,0 +1,13 @@
+.button--remove {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    top: 20px;
+    right: 20px;
+
+    background: url(../../../images/trashcan-icon.svg) no-repeat;
+
+    border: none;
+}

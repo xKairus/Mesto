@@ -1,9 +1,9 @@
 .button--like {
-    width: 22px;
+    width: 25px;
     height: 19px;
+    padding-right: 10px;
 
-    background-image: url(../../../images/like-icon.svg);
-    background-color: #fff;
+    background: url(../../../images/like-icon.svg) no-repeat;
 
     border: none;
 }

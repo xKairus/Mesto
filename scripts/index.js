@@ -73,11 +73,15 @@ function createCard(card) {
     const likeButton = document.createElement('button');
     likeButton.classList.add('button', 'button--like');
 
+    const removeButton = document.createElement('button');
+    removeButton.classList.add('button', 'button--remove');
+
     infoElement.appendChild(nameElement);
     infoElement.appendChild(likeButton);
 
     cardElement.appendChild(imageElement);
     cardElement.appendChild(infoElement);
+    cardElement.appendChild(removeButton);
 
     return cardElement;
 }
@@ -103,7 +107,10 @@ function addCard(event) {
     closePopup(locationPopup);
 }
 
-
+function removeCard(event) {
+    const card = event.target.closest('.location__card');
+    card.parentNode.removeChild(card);
+}
 
 function saveClick(event) {
     event.preventDefault();
@@ -139,3 +146,11 @@ closeButton.forEach(function (button) {
 saveButton.forEach(button => {
     button.addEventListener('click', saveClick);
 });
+
+// ---remove card on click---
+cardsContainer.addEventListener('click', function (event) {
+    if (event.target.classList.contains('button--remove')) {
+        removeCard(event);
+    }
+});
+

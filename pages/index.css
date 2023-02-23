@@ -49,6 +49,7 @@
 @import url(../blocks/button/--close/button--close.css);
 @import url(../blocks/button/--edit/button--edit.css);
 @import url(../blocks/button/--like/button--like.css);
+@import url(../blocks/button/--remove/button--remove.css);
 @import url(../blocks/button/--save/button--save.css);
 
 /* ----- hidden ----- */
