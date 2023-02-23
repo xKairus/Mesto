@@ -1,0 +1,10 @@
+.button--save {
+    margin: 48px 36px 37px;
+    padding: 14px 0 18px;
+
+    font-size: 18px;
+    line-height: 1.2;
+
+    color: #fff;
+    background-color: #000;
+}

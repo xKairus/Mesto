@@ -1,0 +1,19 @@
+.button--edit {
+    width: 24px;
+    height: 24px;
+
+    margin-top: 15px;
+
+    background: url(../../../images/edit-button.svg) no-repeat center;
+
+    border: 1px solid #fff;
+}
+
+@media (max-width: 750px) {
+    .button--edit {
+        width: 18px;
+        height: 18px;
+
+        margin-top: 8px;
+    }
+}
