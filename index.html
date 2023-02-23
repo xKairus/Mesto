@@ -29,6 +29,27 @@
                 </p>
             </div>
             <button class="button button--add"></button>
+
+            <form action="" class="popup-form popup-form--profile hidden">
+                <h2 class="popup-form__heading">Редактировать профиль</h2>
+                <fieldset class="popup-form__input-field">
+                    <input type="text" placeholder="Ваше имя" class="popup-form__input name-input" maxlength="30">
+                    <input type="text" placeholder="Ваша профессия" class="popup-form__input job-input" maxlength="40">
+                </fieldset>
+                <button class="button button--save">Сохранить</button>
+                <button class="button button--close"></button>
+            </form>
+
+            <form action="" class="popup-form popup-form--location hidden">
+                <h2 class="popup-form__heading">Новое место</h2>
+                <fieldset class="popup-form__input-field">
+                    <input type="text" placeholder="Название" class="popup-form__input name-input" maxlength="30">
+                    <input type="text" placeholder="Ссылка на картинку" class="popup-form__input job-input" maxlength="40">
+                </fieldset>
+                <button class="button button--save">Создать</button>
+                <button class="button button--close"></button>
+            </form>
+
         </section>
         <section class="container location">
             <div class="location__card">

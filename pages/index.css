@@ -33,6 +33,13 @@
 
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 
+/* ----- popup-form ----- */
+@import url(../blocks/popup-form/popup-form.css);
+
+@import url(../blocks/popup-form/__heading/popup-form__heading.css);
+@import url(../blocks/popup-form/__input-field/popup-form__input-field.css);
+@import url(../blocks/popup-form/__input/popup-form__input.css);
+
 /* ----- button ----- */
 @import url(../blocks/button/button.css);
 
@@ -41,3 +48,6 @@
 @import url(../blocks/button/--edit/button--edit.css);
 @import url(../blocks/button/--like/button--like.css);
 @import url(../blocks/button/--save/button--save.css);
+
+/* ----- hidden ----- */
+@import url(../blocks/hidden/hidden.css);
