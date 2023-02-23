@@ -24,6 +24,24 @@ function openPopup(popup) {
 
 function closePopup(popup) {
     popup.classList.add('hidden');
+    nameInput.value = ''
+    jobInput.value = ''
+}
+
+function editProfile(e) {
+    e.preventDefault()
+    
+    if (nameInput.value == "") {
+    } else {
+        nameField.innerHTML = nameInput.value;
+    }
+    
+    if (jobInput.value == "") {
+    } else {
+        jobField.innerHTML = jobInput.value;
+    }
+    
+    closePopup(profilePopup)
 }
 
 editButton.addEventListener('click', function () {
@@ -39,3 +57,5 @@ closeButton.forEach(function (button) {
         closePopup(button.parentNode);
     });
 });
+
+saveButton.addEventListener('click', editProfile);
