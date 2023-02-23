@@ -7,3 +7,11 @@
 
 /* ----- container ----- */
 @import url(../blocks/container/container.css);
+
+/* ----- location ----- */
+@import url(../blocks/location/location.css);
+
+@import url(../blocks/location/__card/location__card.css);
+@import url(../blocks/location/__image/location__image.css);
+@import url(../blocks/location/__info/location__info.css);
+@import url(../blocks/location/__name/location__name.css);
