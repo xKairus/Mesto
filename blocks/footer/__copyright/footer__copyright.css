@@ -4,3 +4,12 @@
 
     color: #545454;
 }
+
+
+@media (max-width: 780px) {
+    .footer__copyright {
+        margin-left: 20px;
+
+        font-size: 14px;
+    }
+}
