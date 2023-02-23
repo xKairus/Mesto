@@ -1,0 +1,11 @@
+.location__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 79px;
+    padding-left: 21px;
+    padding-right: 30px;
+
+    background-color: #fff;
+}

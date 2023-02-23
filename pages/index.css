@@ -8,6 +8,17 @@
 /* ----- container ----- */
 @import url(../blocks/container/container.css);
 
+/* ----- location ----- */
+@import url(../blocks/location/location.css);
+
+@import url(../blocks/location/__card/location__card.css);
+@import url(../blocks/location/__image/location__image.css);
+@import url(../blocks/location/__info/location__info.css);
+@import url(../blocks/location/__name/location__name.css);
+
+/* ----- container ----- */
+@import url(../blocks/container/container.css);
+
 /* ----- header ----- */
 @import url(../blocks/header/header.css);
 
@@ -28,3 +39,4 @@
 @import url(../blocks/button/--edit/button--edit.css);
 @import url(../blocks/button/--like/button--like.css);
 @import url(../blocks/button/--save/button--save.css);
+
