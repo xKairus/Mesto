@@ -1,0 +1,16 @@
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    max-width: 430px;
+    top: 180px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: var(--color-bg-secondary);
+
+    border-radius: 10px;
+}
