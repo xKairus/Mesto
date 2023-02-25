@@ -53,13 +53,22 @@
             <button type="button" class="button button--close" aria-label="Закрыть"></button>
         </form>
     </main>
-
     <footer class="container footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
 
-    <script type="module" src="scripts/initialCards.js"></script>
-    <script type="module" src="scripts/index.js"></script>
+    <template class="card-template">
+        <div class="location__card"><img src="" alt="" class="location__image">
+            <div class="location__info">
+                <h2 class="location__name">Байкал</h2>
+                <button class="button button--like"></button>
+            </div>
+            <button class="button button--remove"></button>
+        </div>
+    </template>
+
+    <script src="./scripts/initialCards.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
