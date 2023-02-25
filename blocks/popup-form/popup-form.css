@@ -21,3 +21,15 @@
         margin: 0 22px;
     }
 }
+
+
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.error-message_active {
+    display: block;
+}

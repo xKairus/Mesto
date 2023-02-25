@@ -32,24 +32,25 @@
         </section>
         <section class="container location">
         </section>
-        <form name="edit-form" action="" class="popup-form popup-form--profile hidden">
+        <form name="edit-form" method="post" action="submit" class="popup-form popup-form--profile hidden">
             <h2 class="popup-form__heading">Редактировать профиль</h2>
             <fieldset class="popup-form__input-field">
                 <input type="text" placeholder="Ваше имя" class="popup-form__input name-input" maxlength="30">
                 <input type="text" placeholder="Ваша профессия" class="popup-form__input job-input" maxlength="40">
-                <input type="button" class="button button--save" data-location="profile" value="Сохранить">
+                <input type="submit" class="button button--save" data-location="profile" value="Сохранить">
             </fieldset>
-            <button type="button" class="button button--close"></button>
+            <button type="button" class="button button--close" aria-label="Закрыть"></button>
         </form>
-        <form name="add-form" action="" class="popup-form popup-form--location hidden">
+        <form name="add-form" method="post" action="submit" class="popup-form popup-form--location hidden">
             <h2 class="popup-form__heading">Новое место</h2>
             <fieldset class="popup-form__input-field">
-                <input type="text" placeholder="Название" class="popup-form__input location-input" maxlength="30" required>
-                <input type="url" placeholder="Ссылка на картинку" class="popup-form__input image-input"
+                <input type="text" name="location" placeholder="Название" class="popup-form__input location-input" maxlength="30"
                     required>
-                <input type="button" class="button button--save" data-location="card" value="Создать">
+                <input type="url" name="url" placeholder="Ссылка на картинку" class="popup-form__input image-input" required>
+                <div class="error-message"></div>
+                <input type="submit" class="button button--save" data-location="card" value="Создать">
             </fieldset>
-            <button type="button" class="button button--close"></button>
+            <button type="button" class="button button--close" aria-label="Закрыть"></button>
         </form>
     </main>
 
