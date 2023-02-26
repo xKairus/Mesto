@@ -50,14 +50,14 @@ initialCards.forEach((item) => {
 
 
 // ---open popup on click ---
-const openPopup = (popup) => popup.classList.remove('popup--closed');
+const openPopup = (popup) => popup.classList.add('popup--open');
 
 profileEditButton.addEventListener('click', () => openPopup(profileEditPopup));
 addCardButton.addEventListener('click', () => openPopup(addCardPopup))
 
 
 // ---close popup on click---
-const closePopup = (popup) => popup.classList.add('popup--closed')
+const closePopup = (popup) => popup.classList.remove('popup--open');
 
 closePopupButton.forEach(button => {
     button.addEventListener('click', (event) => {
@@ -94,28 +94,31 @@ const addCard = (event) => {
         errorMessage.textContent = '';
     });
 
+    let valid = true;
+
     if (title === '') {
-        // Show an error message to the user
         const errorMessage = addCardPopup.querySelector('.error-message--name');
         errorMessage.textContent = 'Введите название места';
-        return false; // Return false if the URL is not valid
+        valid = false;
     }
 
     if (!isValidUrl(url)) {
-        // Show an error message to the user
         const errorMessage = addCardPopup.querySelector('.error-message--url');
         errorMessage.textContent = 'Введите корректную ссылку на картинку';
-        return false; // Return false if the URL is not valid
+        valid = false;
     }
 
-    // Clear any existing error message
-    const errorMessage = addCardPopup.querySelector('.error-message');
-    errorMessage.textContent = '';
+    if (valid) {
+        // Clear any existing error message
+        const errorMessage = addCardPopup.querySelector('.error-message');
+        errorMessage.textContent = '';
 
-    renderItem(cardsContainer, title, url);
-    cardLocInput.value = '';
-    cardImgInput.value = '';
-    return true; // Return true if the card is added successfully
+        renderItem(cardsContainer, title, url);
+        cardLocInput.value = '';
+        cardImgInput.value = '';
+    }
+
+    return valid; // Return true if the card is added successfully
 }
 
 
@@ -160,21 +163,23 @@ const saveClick = (event) => {
 
     const popup = event.target.closest('.popup');
 
-    if (popup === profileEditPopup) {
-        if (editProfile(event)) {
-            closePopup(profileEditPopup);
-        }
-    } else if (popup === addCardPopup) {
-        if (addCard(event)) {
-            closePopup(addCardPopup);
-        }
+    switch (popup) {
+        case profileEditPopup:
+            if (editProfile(event)) {
+                closePopup(profileEditPopup);
+            }
+            break;
+        case addCardPopup:
+            if (addCard(event)) {
+                closePopup(addCardPopup);
+            }
+            break;
+        default:
+            break;
     }
 }
 
-saveFormButton.forEach(button => {
-    button.addEventListener('click', saveClick)
-    console.log('click')
-});
+saveFormButton.forEach(button => button.addEventListener('click', saveClick));
 
 
 

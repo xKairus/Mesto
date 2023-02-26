@@ -8,4 +8,8 @@
     height: 100%;
 
     background-color: rgba(0, 0, 0, .5);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .5s ease-in-out, opacity .5s ease-in-out;
 }
