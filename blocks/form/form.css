@@ -17,3 +17,10 @@
         margin: 114px 22px 0;
     }
 }
+
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
