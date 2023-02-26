@@ -1,0 +1,19 @@
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 430px;
+
+    margin: 180px auto 0;
+
+    background-color: var(--color-bg-secondary);
+
+    border-radius: 10px;
+}
+
+@media (max-width: 460px) {
+    .form {
+        margin: 114px 22px 0;
+    }
+}

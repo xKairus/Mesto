@@ -1,4 +1,4 @@
-.popup-form__input-field {
+.form__input-field {
     border: none;
 
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 460px) {
-    .popup-form__input-field {
+    .form__input-field {
         margin: 0 22px;
     }
 }
