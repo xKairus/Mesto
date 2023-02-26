@@ -5,6 +5,7 @@ const profileJobField = document.querySelector('.profile__job');
 // ---popup---
 const profileEditPopup = document.querySelector('.popup--profile');
 const addCardPopup = document.querySelector('.popup--location');
+const imagePopup = document.querySelector('.popup--image');
 
 // ---input---
 const profileNameInput = document.querySelector('.form__input--name');
@@ -17,7 +18,6 @@ const profileEditButton = document.querySelector('.button--edit');
 const addCardButton = document.querySelector('.button--add');
 const closePopupButton = document.querySelectorAll('.button--close');
 const saveFormButton = document.querySelectorAll('.button--save');
-const likeButton = document.querySelectorAll('.button--like');
 
 // ---template wrapper---
 const cardsContainer = document.querySelector('.container.location');
@@ -38,11 +38,11 @@ const getItemElement = (title, url) => {
     newItemUrl.alt = title;
 
     return newItemElement;
-}
+};
 
 const renderItem = (wrap, title, url) => {
     wrap.prepend(getItemElement(title, url));
-}
+};
 
 initialCards.forEach((item) => {
     renderItem(cardsContainer, item.name, item.link);
@@ -53,7 +53,15 @@ initialCards.forEach((item) => {
 const openPopup = (popup) => popup.classList.add('popup--open');
 
 profileEditButton.addEventListener('click', () => openPopup(profileEditPopup));
-addCardButton.addEventListener('click', () => openPopup(addCardPopup))
+addCardButton.addEventListener('click', () => openPopup(addCardPopup));
+
+const addImagePopup = (event) => {
+    const image = event.target.closest('.location__card').querySelector('.location__image');
+    const imagePopupImage = imagePopup.querySelector('.popup__image');
+    imagePopupImage.src = image.src;
+    imagePopupImage.alt = image.alt;
+    openPopup(imagePopup);
+};
 
 
 // ---close popup on click---
@@ -110,7 +118,7 @@ const addCard = (event) => {
 
     if (valid) {
         // Clear any existing error message
-        const errorMessage = addCardPopup.querySelector('.error-message');
+        const errorMessage = addCardPopup.querySelector('.form__error-message');
         errorMessage.textContent = '';
 
         renderItem(cardsContainer, title, url);
@@ -119,7 +127,7 @@ const addCard = (event) => {
     }
 
     return valid; // Return true if the card is added successfully
-}
+};
 
 
 // ---remove card---
@@ -135,6 +143,9 @@ cardsContainer.addEventListener('click', (event) => {
     }
     if (event.target.classList.contains('button--like')) {
         like(event);
+    }
+    if (event.target.classList.contains('location__image')) {
+        addImagePopup(event);
     }
 });
 
@@ -153,8 +164,8 @@ const editProfile = (event) => {
 
     profileNameInput.value = '';
     profileJobInput.value = '';
-    closePopup(profileEditPopup)
-}
+    closePopup(profileEditPopup);
+};
 
 
 // ---submit form---
@@ -177,7 +188,7 @@ const saveClick = (event) => {
         default:
             break;
     }
-}
+};
 
 saveFormButton.forEach(button => button.addEventListener('click', saveClick));
 
