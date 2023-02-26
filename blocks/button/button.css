@@ -4,5 +4,7 @@
 }
 
 .button:hover {
-    opacity: .6;
+    opacity: .5;
+
+    cursor: pointer;
 }

@@ -17,6 +17,7 @@ const profileEditButton = document.querySelector('.button--edit');
 const addCardButton = document.querySelector('.button--add');
 const closePopupButton = document.querySelectorAll('.button--close');
 const saveFormButton = document.querySelectorAll('.button--save');
+const likeButton = document.querySelectorAll('.button--like');
 
 // ---template wrapper---
 const cardsContainer = document.querySelector('.container.location');
@@ -121,9 +122,16 @@ const addCard = (event) => {
 // ---remove card---
 const removeCard = (event) => event.target.closest('.location__card').remove();
 
+// ---like card---
+const like = (event) => event.target.classList.toggle('button--like--active');
+
+// ---click on card's buttons---
 cardsContainer.addEventListener('click', (event) => {
     if (event.target.classList.contains('button--remove')) {
         removeCard(event);
+    }
+    if (event.target.classList.contains('button--like')) {
+        like(event);
     }
 });
 
@@ -167,3 +175,6 @@ saveFormButton.forEach(button => {
     button.addEventListener('click', saveClick)
     console.log('click')
 });
+
+
+
